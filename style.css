@@ -1,0 +1,46 @@
+*{
+    color: aliceblue;
+}
+
+body{
+    background-color: rgb(28, 28, 28);
+    margin: 0;/*quitar bordes de la pagina*/
+    box-sizing: border-box;
+}
+
+div{    /*estilos para todos los divs*/
+    border: 1px solid lawngreen;
+}
+
+
+
+
+
+.titulo{
+    color: red;
+    background-color: orange;
+}
+
+
+.iconosContacto{
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+
+.pieDePag{/*FOOTER*/
+    background-color: rgb(48, 48, 48);
+    width: 100%;/*vertivcal ancho*/
+    height: auto; /*largo horizontal*/
+    z-index: 0;
+}
+
+
+
+.pieDePag:hover{/*Cuando se pasa el mouse por encima*/
+    background-color: aqua;
+    width: 100%;/*vertivcal ancho*/
+    height: auto; /*largo horizontal*/
+    
+}
