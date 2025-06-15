@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Página de Prueba</title>
+    <title>DavidSz - Home</title>
   </head>
 
 
   <body>
 
 
-    <header><!--aqui va logo nombreempresa y navegacion princiap[l ] -->
+    <header><!--aqui va logo nombreempresa y navegacion princiap -->
         
       <div class="branding">
-        <!--poner logo -->
-        <span>Nombre de empresa</span>
-        <nav>Seccion de navegacion principal(add links)</nav>
+
+        <nav>
+          <a href="http://google.com" target="_blank">Servicios</a>
+          <a href="http://google.com" target="_blank">Producto</a>
+          <a href="http://google.com" target="_blank">Contacto</a>
+          <a href="http://google.com" target="_blank">Servico al cliente</a>
+        </nav>
+        <img width="57px" height="55px" src="assets/img/logoPrincipal.png" alt="Logo">
+        <span class="nombreEmpresa">David Sz</span>
       </div>
 
      
@@ -25,20 +31,31 @@
 
 
 
-    <main class="contenidoPrincipal">  <!--en main no va header, footer o nav-->
+    <main class="contenidoPrincipal">  <!--en main no va header, footer ni nav-->
       
-      <h1 class="titulo">Titulo principal</h1>
-      <h2 class="subtitulo">Subtitulo de un H2</h2>
-      <h3 class="subtitulo">Este es un h3</h3>
+      <div class="presentacion">
+        <h1 class="titulo">Bienvenidos a mi página web</h1>
+
+      </div>
+      
+
+
+      <h2 class="subtitulo">Mision</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?</p>
+      <h2 class="subtitulo">Vision</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?</p>
+      <h2 class="subtitulo">Objetivos</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non velit alias molestiae. Suscipit animi fuga minima error maiores, odio molestiae quas? Placeat hic minus vel eaque inventore! Veritatis, ex minus?</p>
+
+
+
+      <h3 class="subtitulo"></h3>
       <p class="parrafo">
-        Lorem <em>ipsum</em> dolor sit amet consectetur
-        <strong>adipisicing</strong>elit. Maxime id a accusantium illum
-        provident repellat consectetur quos repellendus obcaecati, sint, eveniet
-        neque? Corrupti incidunt fugiat in, quibusdam repudiandae ea et?
+        Este es un ejemplo de texto usando <em>cursiva</em> y también <strong>negrita</strong> 
       </p>
       
 <!--Videos-->
-      <h3>Video usando iframe </h3>
+      <h3 class="subtitulo">Video usando iframe </h3>
       <iframe width="600px" height="400px" src="https://www.youtube.com/embed/rPR7m5D5u6s?si=QSHW_bT6joDNDkaz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>
     
     <h3 class="subtitulo">Video desde una carpeta local </h3>
@@ -47,45 +64,86 @@
     </video>
     
 <!--Imagenes-->
-    <h3 >Imagen desde la web</h3>
+    <h3 class="subtitulo">Imagen desde la web</h3>
       <img width="300px" height="450px" src="https://img.freepik.com/foto-gratis/colibri-colores-vividos-naturaleza_23-2151495312.jpg?semt=ais_hybrid&w=740" alt="Imagen de un colibri">
       <h3 class="subtitulo">Imagen desde nuestro proyecto local</h3>
       <img width="300px" height="450px" src="assets/img/leomessi.jpg" alt="Leonel Messi">
 
 
 <!--listas-->
+    <h3 class="subtitulo">Listas</h3>
 <ol>
-  <li>Prier paso: Aprender HTML</li>
+  <li>Primer paso: Aprender HTML</li>
   <li>Segundo paso: Aprender Css</li>
   <li>Tercer paso: Aprender Javascript</li>
 </ol>
 
+    <h3 class="subtitulo">Tablas</h3>
 
 
+<!--Tabla-->
+<table class="tabla">
+    <thead><!---->
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
 
-
+    <tbody>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Pedro</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Luisa</td>
+            <td>28</td>
+        </tr>
+    </tbody>
+</table>
+    <h3 class="subtitulo">Formulario</h3>
 
 </main>
+
+
+
+
     <!--El footer es una seccion para pie de pagina  -->
     <footer class="pieDePag">
-      <p>Redes ssociales</p>
+      <p>Visita nuestras redes sociales</p>
       <div class="iconosRedes">
+
+        <a target="_blank" href="https://www.instagram.com/">
         <img
           src="assets/img/Icon_Instagram.png"
           alt="Icono de Instagram"
           class="iconosContacto"
         />
+        </a>
+
+<a target="_blank" href="https://www.facebook.com/">
         <img
           src="assets/img/Icon_facebook.png"
           alt="Icono de Facebook"
           class="iconosContacto"
         />
+</a>
+
+<a target="_blank" href=https://github.com/">
         <img
           src="assets/img/Icon_github.png"
           alt="Icono de GitHub"
           class="iconosContacto"
         />
+</a>
+
+
       </div>
+      <a target="_blank" href="https://github.com/Datrixzn19/mi_pagina_web">Vistita nuestro codigo fuente</a>
     
 
     </footer>
