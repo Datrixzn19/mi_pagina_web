@@ -20,7 +20,9 @@ div{    /*estilos para todos los divs*/
     color: red;
     background-color: orange;
 }
-
+.subtitulo{
+    margin-top: 50px;
+}
 
 .iconosContacto{
     width: 30px;
