@@ -13,6 +13,7 @@
     <header><!--aqui va logo nombreempresa y navegacion princiap -->
         
       <div class="branding">
+        <img width="57px" height="55px" src="assets/img/logoPrincipal.png" alt="Logo">
 
         <nav>
           <a href="http://google.com" target="_blank">Servicios</a>
@@ -20,8 +21,7 @@
           <a href="http://google.com" target="_blank">Contacto</a>
           <a href="http://google.com" target="_blank">Servico al cliente</a>
         </nav>
-        <img width="57px" height="55px" src="assets/img/logoPrincipal.png" alt="Logo">
-        <span class="nombreEmpresa">David Sz</span>
+
       </div>
 
      
@@ -34,8 +34,7 @@
     <main class="contenidoPrincipal">  <!--en main no va header, footer ni nav-->
       
       <div class="presentacion">
-        <h1 class="titulo">Bienvenidos a mi página web</h1>
-
+        <h1 class="titulo">Sacrifica <br> el hoy para <br> conquistar el <br> manaña</h1>
       </div>
       
 
@@ -78,34 +77,65 @@
   <li>Tercer paso: Aprender Javascript</li>
 </ol>
 
+
+
     <h3 class="subtitulo">Tablas</h3>
-
-
 <!--Tabla-->
 <table class="tabla">
-    <thead><!---->
+    <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
+            <th>Materia</th>
+            <th>Calificacion</th>
         </tr>
     </thead>
 
     <tbody>
         <tr>
-            <td>Ana</td>
-            <td>25</td>
+            <td>Desarrollo de Apps Web</td>
+            <td>89</td>
         </tr>
         <tr>
-            <td>Pedro</td>
-            <td>30</td>
+            <td>Programacion II</td>
+            <td>90</td>
         </tr>
         <tr>
-            <td>Luisa</td>
-            <td>28</td>
+            <td>Estructura de Datos</td>
+            <td>92</td>
         </tr>
     </tbody>
 </table>
-    <h3 class="subtitulo">Formulario</h3>
+
+
+        <h3 class="subtitulo">Formulario</h3><!--form contiene todos los elementos incluso ek de enviar  -->
+
+
+        <div class="formulario">
+        <form class="formulario" action=""><!--action es a donde se va a enciar el resultado  -->
+          <label for="usuario">Nombre:  </label>
+          <input id="usuario" type="text"> <!--input  es el campo, type es el tipo de dato que queremos en el formulario-->
+          <br>
+          <br>
+
+          <label for="email">Correo:  </label>
+          <input id="email" type="email"> <!--es lo mismo que text pero valida que tenga el arroba-->
+          <br> 
+          <br>
+
+          <label for="contraseña">Contraseña:  </label>
+          <input id="contraseña" type="password">  <!--es lo mismo que text pero valida que tenga el arroba-->
+          <br>
+          <br>
+          <input type="submit">
+          <input type="reset">
+
+        </div>
+
+
+<!---->
+
+        </form>
+
+
 
 </main>
 
@@ -114,7 +144,7 @@
 
     <!--El footer es una seccion para pie de pagina  -->
     <footer class="pieDePag">
-      <p>Visita nuestras redes sociales</p>
+      <p>Visita nuestras redes sociales </p>
       <div class="iconosRedes">
 
         <a target="_blank" href="https://www.instagram.com/">
@@ -133,7 +163,7 @@
         />
 </a>
 
-<a target="_blank" href=https://github.com/">
+<a target="_blank" href="https://github.com">
         <img
           src="assets/img/Icon_github.png"
           alt="Icono de GitHub"
@@ -143,7 +173,9 @@
 
 
       </div>
+
       <a target="_blank" href="https://github.com/Datrixzn19/mi_pagina_web">Vistita nuestro codigo fuente</a>
+      <p>15-Junio-2025</p>
     
 
     </footer>
