@@ -73,7 +73,18 @@ body{
     margin: auto;
 
 }
-  
+.row{
+    transition: all 0.3s ease;
+  transform: translateY(0);
+  cursor: pointer;
+
+}
+.row:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+
+
 .tabla{
     border: 5px solid rgb(46, 11, 81);
     border-radius: 5px;
@@ -128,8 +139,15 @@ input{
 
 }
 
-
-
+a:hover, button:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgb(42, 4, 166) !important;
+}
+img:hover{
+    transform: translateY(-15px);
+    rotate: 12deg;
+    box-shadow: 0 10px 20px rgb(9, 2, 34) !important;
+}
 
 @media (max-width: 700px) {
   /* Estilos para móviles  */
