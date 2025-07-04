@@ -1,12 +1,17 @@
+
+/* login*/
 *{
     color: aliceblue;
 }
+
 
 body{
     background: radial-gradient(circle,rgb(6, 6, 31) 1%, rgb(7, 1, 18) 100%);
     margin: 0;/*quitar bordes de la pagina*/
     box-sizing: border-box;
 }
+
+
 .navP{
     display: flex;
     justify-content: end;
@@ -24,6 +29,8 @@ body{
     float: right;
 }
 
+
+
 .branding{
     position: fixed; 
     background-color: black; 
@@ -32,14 +39,24 @@ body{
     text-align: right;
 
 }
-body{
-    background-color: aqua;
-}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* login*/
 
 .contenedorLogin{
    
@@ -47,7 +64,7 @@ body{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin: auto;
-    width: 30%;
+    width: 40%;
     height: 700px;
     box-shadow: 0px 0px 170px 18px rgba(55, 0, 236, 0.744);
     -webkit-box-shadow: 0px 0px 170px 18px rgba(55, 0, 236, 0.832);
@@ -60,7 +77,7 @@ body{
 }
 
 
-/*Aspectos internos del login*/
+
 .recuerdame.form-check-label{ 
 text-align:left;
 width: 100%;
@@ -68,15 +85,8 @@ width: 100%;
 
 
 
-imgLogo:hover{
-    box-shadow: none;
-    transform: translateY(0px);
-
-}
-aLogo:hover{
-    box-shadow: none;
-    transform: translateY(0px);
-
+.form-label{
+    font-size: 20px;
 }
 
 
@@ -101,35 +111,7 @@ aLogo:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* footer*/
 
 .iconosContacto{
     width: 30px;
@@ -138,13 +120,12 @@ aLogo:hover{
 }
 
 
-.pieDePag.text-center{
+.pieDePag.text-center.bg-light{/*FOOTER*/
 
     margin-top: 50px;
-    width: 100%;/*vertivcal*/
+    width: 100%;/*vertivcal ancho*/
+    height: 100px; /*largo horizontal*/
     z-index: 0;
-    bottom: 0;
-
    
 
 }
@@ -153,8 +134,8 @@ a:hover{
     transform: translateY(-15px);
     box-shadow: 0 10px 20px rgb(42, 4, 166) !important;
 }
-
-aLogo:hover{
-    transform: none;
-    box-shadow: none;
+img:hover{
+    transform: translateY(-15px);
+    rotate: 12deg;
+    box-shadow: 0 10px 20px rgb(9, 2, 34) !important;
 }
