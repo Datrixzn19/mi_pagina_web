@@ -40,31 +40,43 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Nombre</label>
       <input  style="color: #09061d;" type="text" type="text" class="form-control" id="inputNombre"> <!-- revisdar si va email help--> 
+      <span style="color:red; font-size:15px; margin-top: 0px;" id="errorNombre"></span>
     </div>
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Correo</label>
-      <input style="color: #09061d;" placeholder="usuario@gmail.com" type="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input style="color: #09061d;" placeholder="usuario@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <span style="color:red; font-size:15px" id="errorCorreo"></span>
     </div>
 
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword2">
+      <input type="password" class="form-control" id="exampleInputPassword">
+      <span  style="color:red; font-size:15px" id="errorContra"></span>
+      <span  style="color:red; font-size:15px" id="errorContra1"></span>
     </div>
     
     <div class="mb-3">
       <p class="coincide" id="coincide" ></p>
       <label for="exampleInputPassword1" class="form-label">Confirma tu contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input type="password" class="form-control" id="exampleInputPassword2">
+      <span style="color:red; font-size:15px" id="errorContraRep"></span>
     </div>
 
-         <!--campo para la edad --> 
+    
  
+    <div class="mb-3">
+      <label for="number" class="form-label">Introduce tu edad</label>
+      <input style="color: #000; width:auto ;border-radius: 10px;" type="number" id="edad" name="edad">
+      <span style="color:red; font-size:15px" id="errorEdad"></span>
+    </div>
+
+
     <p style="font-size: 15px; color: rgb(255, 0, 0) " id="warnings"></p>
-    <button id="boton-registro" style="width:150px; height: 50px; font-size: 20px;" type="submit" class="btn btn-primary">Iniciar Sesión</button> <!-- poner luego el disabled y el  cursor: not-allowed;!!!!!!!!!!!!!!!!!!!1-->
-     <!--quitar el not allowed y poner default, el disable poner en false desde js -->      
-    <button id="boton-reset" style="width:150px ; height: 50px; font-size: 15px;" type="submit" class="btn btn-primary">Reiniciar Formulario</button>
+    <button id="boton-registro" style="width:150px; height: 50px; font-size: 20px;" disabled type="submit" class="btn btn-primary">Iniciar Sesión</button>    
+    <button id="boton-reset" style="width:150px ; height: 50px; font-size: 15px;" type="reset" class="btn btn-primary">Reiniciar Formulario</button>
     <p style="font-size: 20px;padding: 15px;" >Ya tienes una cuenta? <a href="paginaRegistro.html">Inica Sesión</a></p>
+    <p style="font-size: 15px;" id="confirmar"></p>
   </form>
 </div>
 
