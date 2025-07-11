@@ -23,8 +23,9 @@ body{
     border-radius: 15px;
     border: none;
     display: block;
-    margin: 10px, auto;
+    margin: 100px auto;
 }
+
 li{
     padding: 10px;
 }
