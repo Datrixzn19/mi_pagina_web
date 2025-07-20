@@ -1,0 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle,rgb(6, 6, 31) 1%, rgb(7, 1, 18) 100%);
+    color: white !important;
+    box-sizing: border-box;
+}
