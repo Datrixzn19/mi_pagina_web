@@ -119,12 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
      let entrar = true;
 
 
-    if (entrar) {//si hay erroes los muestra 
+    if (entrar) {
+      confirmacionEntrada.style.display = "default"
       confirmacionEntrada.style.color = "rgb(17, 255, 0)";//mod estilos desde js 
-      confirmacionEntrada.innerHTML = "Formulario enviado de manera correcta"
+      confirmacionEntrada.innerHTML = "El formulario se ha enviado correctamente"
 
       
     }else{
+      confirmacionEntrada.style.display = "none"
       confirmacionEntrada.innerHTML = ""
     }
 

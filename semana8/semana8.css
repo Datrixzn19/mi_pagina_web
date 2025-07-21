@@ -5,3 +5,110 @@ body{
     color: white !important;
     box-sizing: border-box;
 }
+.titulo{
+    text-align: center;
+    font-weight: 700;
+    margin: 30px 0;
+}
+.subtitulo{
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+/*Estilos para la navegacion*/
+#navegacion{
+    background-color: black !important;
+    color: beige !important;
+}
+#navegacion .nav-link {
+  color: #ecf0f1;
+}
+
+/*Estilos para el carrusel*/
+#carouselExampleIndicators {
+  max-width: 1700px; 
+  margin: 0 auto;
+  height: 600px; 
+  overflow: hidden;
+  position: relative;
+}
+#carouselExampleIndicators .carousel-inner {
+  height: 100%;
+}
+#carouselExampleIndicators .carousel-item {
+  height: 100%;
+  text-align: center;
+}
+#carouselExampleIndicators .carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+
+
+
+/*Estilos para el form*/
+.contenedorLogin{
+   
+    background-color: rgba(40, 10, 78, 0.345); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: auto;
+    width: 40%;
+    height: auto;
+    margin-bottom: 80px;
+    box-shadow: 0px 0px 20px 18px rgba(61, 2, 255, 0.108);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 50px;
+    border-radius: 15px;
+}
+.recuerdame.form-check-label{ 
+text-align:left;
+width: 100%;
+}
+
+.form-label{
+    font-size: 20px;
+}
+
+
+
+
+
+/*Estilos para el footer*/
+.pieDePag.text-center.bg-light{
+
+    margin-top: 50px;
+    width: 100%;/*vertivcal ancho*/
+    height: 100px; /*largo horizontal*/
+    z-index: 0;
+   
+
+}
+.iconosContacto{
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
