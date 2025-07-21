@@ -1,37 +1,43 @@
-//copiando la logica de la s6 del formulario 
+//Validacion de formularios 
 
+/*
+REQUISITOS 
+Nombre (mínimo 3 caracteres).
+Correo electrónico (validar formato correcto).
+
+*/
 
 document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el DOM 
  
   let form = document.getElementById("form");
   let inputNombre = document.getElementById("inputNombre");
   let inputCorreo = document.getElementById("exampleInputEmail1");
-  let inputContra = document.getElementById("exampleInputPassword")
-  let inputContraRep = document.getElementById("exampleInputPassword2")
-  let inputEdad = document.getElementById("edad")
+
+
+
   let confirmacionEntrada = document.getElementById("confirmar")
 
   form.addEventListener("input", e => {
-    e.preventDefault();//evita que se recargue la pagina 
+    e.preventDefault();//evita que se recargue la pagina(se supone que para input no es necesario porque el no recarga la pagina)
      let entrar = true;//para que se vuelva a poner a true en caso de ser necesario 
-      //limpiar los erroes 
+
+      //limpiar los erroes, osea los campos span para nombre y correo
       document.getElementById("errorNombre").innerHTML = "";
       document.getElementById("errorCorreo").innerHTML = "";
-      document.getElementById("errorContra").innerHTML = "";
-      document.getElementById("errorContra1").innerHTML = "";
-      document.getElementById("errorContraRep").innerHTML = "";
-      document.getElementById("errorEdad").innerHTML = "";
-   
+    
+
     let emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; //expresion regular para validar correos usar ente /regex/
-    let contraRegExp = /[!@#$%^&*(),.?":{}|<>]/;
+
 
     if (inputNombre.value.length < 3) {//para el NOMBRE 
     
       document.getElementById("errorNombre").innerHTML = "El nombre es demasiado corto"
       entrar = false
       document.getElementById("inputNombre").style.border = "3px solid red"
+
     }else{
       document.getElementById("inputNombre").style.border = "none"
+
     }
     
     if(!emailRegExp.test(inputCorreo.value)){//para el correo
@@ -40,40 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
         document.getElementById("exampleInputEmail1").style.border = "3px solid red"
     }else{
       document.getElementById("exampleInputEmail1").style.border = "none"
+
     }
  
-
-    if(inputContra.value.length<6){//para la primera contraseña
-        document.getElementById("errorContra").innerHTML = `La contraseña es muy corta <br>`
-        entrar = false
-        document.getElementById("exampleInputPassword").style.border = "3px solid red"
-    }else{
-      document.getElementById("exampleInputPassword").style.border = "none"
-    }
-
-
-    if(!contraRegExp.test(inputContra.value)){//para que pida un caracter especial 
-        document.getElementById("errorContra1").innerHTML = "Introduce al menos un caracter especial"
-       entrar = false  
-    }
-
-
-    if(inputContraRep.value!=inputContra.value){//confirmacion de la contraseña 
-        document.getElementById("errorContraRep").innerHTML = "Las contraseñas no coinciden"
-        entrar = false
-        document.getElementById("exampleInputPassword2").style.border = "3px solid red"
-
-    }else{
-      document.getElementById("exampleInputPassword2").style.border = "none"
-    }
-
-    if(inputEdad.value <18 || inputEdad.value >64){
-      document.getElementById("errorEdad").innerHTML =`<br>La edad debe ser de entre 18 y 64 años`
-      entrar = false
-      document.getElementById("edad").style.border = "3px solid red"
-    }else{
-      document.getElementById("edad").style.border = "none"
-    }
 
     if (entrar) {//habilitar boton 
       document.getElementById("boton-registro").disabled = false//quita el disable que puse en html
@@ -85,6 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
 
     }
 
+
+
+
+
   });//cierre addevent
 
 
@@ -93,25 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
      let entrar = true;
 
 
-    if (entrar) {//si hay erroes los muestra 
+    if (entrar) {
+      confirmacionEntrada.style.display = "block"
       confirmacionEntrada.style.color = "rgb(17, 255, 0)";//mod estilos desde js 
-      confirmacionEntrada.innerHTML = "Formulario enviado de manera correcta"
+      confirmacionEntrada.innerHTML = "El formulario se ha enviado correctamente"
+      alert("El formulario se envio correctamente")
 
       
     }else{
       confirmacionEntrada.innerHTML = ""
     }
+
+
   })//cierre del submit 
+
 });//cierre de esperar al dom
-
-
-
-
-
-
-
-
-
-
-
-//              PARTE DEL LA ALERTS 

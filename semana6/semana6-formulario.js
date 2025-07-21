@@ -138,21 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });//cierre de esperar al dom
+
+
+
+

@@ -4,7 +4,7 @@ Sección Principal: Debe incluir:
 Un carrusel de imágenes utilizando Bootstrap.
 
 Una tabla estilizada para mostrar datos ficticios de productos.
-Un formulario de contacto con validación dinámica usando JavaScript (campos obligatorios: nombre, correo electrónico y mensaje).
+Un formulario de contacto con validación dinámica usando JavaScript (campos obligatorios: nombre, correo electrónico).
 
 Pie de Página: Información de contacto o enlaces a redes sociales.
 Interactividad:
@@ -21,6 +21,7 @@ Validación del Formulario: Asegúrate de que el formulario valide los campos an
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="semana8.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script defer src="semana8.js"></script>
     <title>Atom Cursos</title>
 </head>
 <body>
@@ -131,7 +132,7 @@ Validación del Formulario: Asegúrate de que el formulario valide los campos an
   <form id="form" >
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-      <input  style="color: #09061d;" type="text" type="text" class="form-control" id="inputNombre"> 
+      <input  style="color: #09061d;" type="text" class="form-control" id="inputNombre"> 
       <span style="color:red; font-size:15px; margin-top: 0px;" id="errorNombre"></span>
     </div>
 
@@ -149,9 +150,7 @@ Validación del Formulario: Asegúrate de que el formulario valide los campos an
     <p style="font-size: 20px;padding: 15px;" >Ya tienes una cuenta? <a href="../semana4/paginaRegistro.html">Inica Sesión</a></p>
     
 
-    <div class="alert alert-success" id="confirmar" role="alert">
-
-</div>
+    <div class="alert alert-success" style="display: none;color:black; font-size:15px" id="confirmar" role="alert"></div>
 
   </form>
 </div>
@@ -191,5 +190,5 @@ Validación del Formulario: Asegúrate de que el formulario valide los campos an
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<script src="semana8.js"></script>
+
 </html>
