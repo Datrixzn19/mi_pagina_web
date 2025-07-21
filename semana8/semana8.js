@@ -76,7 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {//esperar a que cargue el D
       confirmacionEntrada.style.display = "block"
       confirmacionEntrada.style.color = "rgb(17, 255, 0)";//mod estilos desde js 
       confirmacionEntrada.innerHTML = "El formulario se ha enviado correctamente"
-      alert("El formulario se envio correctamente")
+
+      setTimeout(function () { // esto para que me muestre el span de confirmacion antes de la alerta 
+        alert("El formulario se envió correctamente");
+      }, 50);//estos son milisegundos 
 
       
     }else{
