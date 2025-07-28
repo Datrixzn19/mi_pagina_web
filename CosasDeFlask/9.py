@@ -1,6 +1,7 @@
 #renderizacion de plantillas
 
-#uso de mas variables y datos 
+#uso de estructuras de control en html
+#se usa en html esto: {{% %}}
 
 from flask import Flask, render_template
 
