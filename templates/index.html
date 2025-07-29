@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI PAGINA WEB</title>
-</head>
-<body>
+<!--borramos lo de html body etc porque eso lo hereda de la plantilla-->
+{%extends "base.html"%}<!--colocamos el nombre de la plantilla de la cual vamos a heredar--> 
+
+
+    {% block titulo%} mundo {% endblock%}
+
+    {% block saludo%} te damos la bienvenidaa la pagina principal 
     
     {% if name %}<!--esto dara true por lo que si se mostrara el nombre-->
         <h1>Bienvenido, {{ name }}</h1>
@@ -13,7 +12,6 @@
         <h1>Bienvenido, no tenemos tu nombre</h1>
     {% endif  %}<!--siempre debemos indicar en donde acaba el if porque sino da error-->
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem architecto impedit voluptatem quod, adipisci reprehenderit eius nemo ad velit repudiandae aperiam quibusdam. Rem fugiat minus molestias deleniti saepe sunt odit.</p>
 
     <ul>
         <!--asi imprimimos una lista desde python-->
@@ -24,11 +22,12 @@
     </ul>
 
 
+    <ul>{{numeros}}</ul><!--nose hice la prueba haber que hace, y los muestra asi [1,2,3...0]-->
+    {% endblock%}
+
+<h3>hola h3</h3><!--esto no se va a mostrar porque esta fuera de un block-->
 
 
 
 
 
-
-</body>
-</html>

@@ -1,0 +1,17 @@
+<!--este el el archivo base, este hereda todo su contenido a los archivos que lo llamen con el extends-->
+
+<!--en el archivo en el que estemos heredando todo lo que no este en un endblock no se renderizara y por lo tanto no se va a mostrar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola {% block titulo%} {% endblock%} </title>
+</head>
+<body>
+    <h1>Bienvenido {% block saludo%}
+        <!--aqui va el contenido, lo podemos en el archivo que este heredando-->
+    {% endblock%}</h1>
+    
+</body>
+</html>
