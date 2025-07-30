@@ -1,50 +1,46 @@
 #renderizacion de plantillas
 
-#creacion de filtros personalizadas
+#creacion de funciones personalizadas
 
 from flask import Flask, render_template
-from datetime import datetime#para hacer el ejemplo de personalizar plantillas 
+ 
 
 app = Flask(__name__)
 
 
-
-#filtros personalizados
-#forma numero uno:
+def repeticion(string, numeroRepeticiones):
+    return string * numeroRepeticiones
+#hay tres formas de enviarla
+        #primera forma
 """
-@app.add_template_filter#necesitamos esto para que jinja lo reconozca
-def hoy(fecha):
-    return fecha.strftime("%a-%B-%Y %M-%S")
-#en html usamos el nombreVariable | NombreFiltro en este caso es "hoy"
 
+def repeticion(string, numeroRepeticiones):
+    return string * numeroRepeticiones
 
+#si usamos esta manera en el render_template deberemos hacer el repeticion = repeticion
+"""
+        #segunda forma
+#tambien podemos enviarla por medio de un decorador 
+"""
+@app.add_template_global
+def repeticion(string, numeroRepeticiones):
+    return string * numeroRepeticiones
 
 """
-#forma numero 2
-
-def hoy(fecha):
-    return fecha.strftime("%a-%B-%Y %M-%S")
-#ojo no poner el @ en app
-app.add_template_filter(hoy, "hoy") #nombre de la funcion, nombre de como la vamos a llamar
-
-
-
-
-
-
-
+        #tercera forma 
+app.add_template_global(repeticion)
 
 @app.route("/")
 def index():
 
     name = "David"
-    fecha = datetime.now()
+   
     numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]#lista que vamos a imprimir 
 
     return render_template("index.html",#podemos organizar si son muchas variables
                              name = name,
-                             numeros = numeros,
-                             fecha = fecha)
+                             numeros = numeros,                             
+                             )
 
 
 
