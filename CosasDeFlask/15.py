@@ -56,3 +56,58 @@ def hello(name = None, edad = None, email = None):
 
 
 
+#en el index
+"""
+<!--borramos lo de html body etc porque eso lo hereda de la plantilla-->
+{%extends "base.html"%}<!--colocamos el nombre de la plantilla de la cual vamos a heredar--> 
+
+
+    {% block titulo%} mundo {% endblock%}
+
+    {% block saludo%} te damos la bienvenidaa la pagina principal 
+    
+    {% if name %}<!--esto dara true por lo que si se mostrara el nombre-->
+        <h1>Bienvenido, {{ name | upper }}</h1>
+        <h1> {{ repeticion("cadenaRepetida", 3) }} </h1>
+    {% else  %}
+        <h1>Bienvenido, no tenemos tu nombre</h1>
+    {% endif  %}<!--siempre debemos indicar en donde acaba el if porque sino da error-->
+
+
+  
+
+
+  
+    {% endblock%}
+
+
+
+
+
+
+
+
+"""
+#en hello.html
+
+"""
+{%extends "base.html"%}<!--colocamos el nombre de la plantilla de la cual vamos a heredar--> 
+
+
+    {% block titulo%} mundote desde hello.html{% endblock%}
+
+    {% block saludo%} te damos la bienvenidaa hello.html 
+    
+    
+    {% if data.name is none and data.edad is none: %} <!--en jinja es none con minuscula == = is-->
+        <h1> No ha enviado valores</h1>
+    {%elif edad is none%}
+        <h1>Hola {{data.name}}, no has dado tu edad</h1> 
+    {%else%}
+        <h1>Hola {{data.name}}, tienes {{data.edad}} años</h1>   
+    {% endif%}
+
+  
+    {% endblock%}
+    
+"""

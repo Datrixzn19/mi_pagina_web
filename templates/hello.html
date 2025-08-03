@@ -1,0 +1,19 @@
+{%extends "base.html"%}<!--colocamos el nombre de la plantilla de la cual vamos a heredar--> 
+
+
+    {% block titulo%} mundote desde hello.html{% endblock%}
+
+    {% block saludo%} te damos la bienvenidaa hello.html 
+    
+    
+    {% if data.name is none and data.edad is none: %} <!--en jinja es none con minuscula == = is-->
+        <h1> No ha enviado valores</h1>
+    {%elif edad is none%}
+        <h1>Hola {{data.name}}, no has dado tu edad</h1> 
+    {%else%}
+        <h1>Hola {{data.name}}, tienes {{data.edad}} años</h1>   
+    {% endif%}
+
+  
+    {% endblock%}
+    
