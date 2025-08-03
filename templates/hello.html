@@ -6,7 +6,7 @@
     {% block saludo%} te damos la bienvenidaa hello.html 
     
     
-    {% if data.name is none and data.edad is none: %} <!--en jinja es none con minuscula == = is-->
+    {% if data.name is none and data.edad is none: %} <!--en jinja es none con minuscula, == = is-->
         <h1> No ha enviado valores</h1>
     {%elif edad is none%}
         <h1>Hola {{data.name}}, no has dado tu edad</h1> 

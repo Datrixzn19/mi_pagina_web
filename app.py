@@ -1,41 +1,25 @@
-#renderizacion de plantillas
+#Formularios
 
-#creacion de funciones personalizadas y envio de datos a plantillas 
-
-from flask import Flask, render_template
+#Manejo de formularios 
+#creacion de la ruta para la pagina de registro
+from flask import Flask, render_template, url_for
  
 
 app = Flask(__name__)
 
 
-def repeticion(string, numeroRepeticiones):
-    return string * numeroRepeticiones
-#hay tres formas de enviarla
-        #primera forma
-"""
 
-def repeticion(string, numeroRepeticiones):
-    return string * numeroRepeticiones
-
-#si usamos esta manera en el render_template deberemos hacer el repeticion = repeticion
-"""
-        #segunda forma
-#tambien podemos enviarla por medio de un decorador 
-"""
-@app.add_template_global
-def repeticion(string, numeroRepeticiones):
-    return string * numeroRepeticiones
-
-"""
-        #tercera forma 
-app.add_template_global(repeticion)
 
 @app.route("/")
 def index():
-    name = "David"
-    numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]#lista que vamos a imprimir 
-    return render_template("index.html",#podemos organizar si son muchas variables
+    print(url_for("index", name = "davdfsfdsfid", edad = 20))
+    print(url_for("hello")) 
+    name = None
+    edad = None
+    numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    return render_template("index.html",
                              name = name,
+                             edad = edad,
                              numeros = numeros,                             
                              )
 
@@ -54,5 +38,7 @@ def hello(name = None, edad = None, email = None):
     return render_template("hello.html", data = myData)
 
 
-
-
+#creamos una ruta para la pagina de registro
+@app.route("/auth/register")
+def register():
+    return render_template("auth/register.html")

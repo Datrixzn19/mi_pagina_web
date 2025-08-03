@@ -6,12 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola {% block titulo%} {% endblock%} </title>
+    <title></title>
 </head>
 <body>
-    <h1>Bienvenido {% block saludo%}
-        <!--aqui va el contenido, lo podemos en el archivo que este heredando-->
+    <!--esto va fuera de content por lo tanto la heredaran los demas -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li><!--ese index es el nombre de la vista-->
+            <li><a href="{{ url_for('hello') }}">Hello</a></li>
+            <li><a href="{{ url_for('register') }}">Registrarse</a></li>
+        </ul>
+    </nav>
+
+    <h1>{% block saludo%}
+        mainnn
     {% endblock%}</h1>
+
+
+
     
 </body>
 </html>
