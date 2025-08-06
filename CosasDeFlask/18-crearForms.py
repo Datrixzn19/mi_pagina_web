@@ -88,3 +88,41 @@ def register():
             error = "El nombre debe ser mayor a 3 dijtos y la contra mayor a 4"
             return render_template("auth/register.html",form = form, error = error)
             """
+    
+#en register.html
+"""
+    {%extends "base.html"%}<!--colocamos el nombre de la plantilla de la cual vamos a heredar--> 
+
+
+    {% block titulo%} Registro {% endblock%}
+
+    {% block saludo%}
+        <h1>Pagina de registro</h1>
+<!--Formulario anterior para probar las validaciones 
+        <form action="" method="post"> comment:es una buena practica este metodo, porque sino al enviar los datos se muestran en la url, con post no pero debemos especificar en la vista que vamos a recibir datos en ese metodo
+
+            <label for="username">Nombre de usuario</label>
+            <input name="username" type="text" id=username">
+            <br>
+            <label for="password">Contraseña</label>
+            <input name="password" type="password" id="password">
+            <br>
+            <button value="Register" type="submit">Enviar</button>
+        </form> -->
+
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }} {{ form.username }}
+            {{ form.password.label }} {{ form.password }}
+            {{ form.submit }}
+
+        </form>
+
+
+        {%if error%}
+        <p style="color: red;"> {{error}} </p>
+        
+        {%endif%}
+
+    {%endblock%}
+"""
