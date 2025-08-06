@@ -1,18 +1,13 @@
-#creacion de formularios con WTForm
-# Necesitamos instalar esta libreria, detenemos el server y escribimos pip install flask-wtf
-#para crear estos formularios debemos crear una clave secreta --> app.config.from_mapping
-#esta clave se la crea simpre que vayamos a trabajar con inicios de secion y otras cosas silimares, es obligatorio
+#validaciones con wtforms 
 
 from flask import Flask, render_template, url_for, request 
 
-app = Flask(__name__)
 
+
+app = Flask(__name__)
 app.config.from_mapping(
     SECRET_KEY = 'dev'
 )
-
-
-
 @app.route("/")
 def index():
     print(url_for("index", name = "davdfsfdsfid", edad = 20))
@@ -25,9 +20,6 @@ def index():
                              edad = edad,
                              numeros = numeros,                             
                              )
-
-
-
 @app.route("/hello")#
 @app.route("/hello/<string:name>")#
 @app.route("/hello/<string:name>/<int:edad>")
@@ -48,43 +40,25 @@ def hello(name = None, edad = None, email = None):
 
 
 
-#Crear formularios con wtforms 
+#validar formularios con wtforms 
 from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,SubmitField #estos son para craer inputs segun el tipo
+from wtforms import StringField,PasswordField,SubmitField 
+from wtforms.validators import DataRequired, length #para decir requerido y para cuantos caracteres 
+class registerForm(FlaskForm):
 
-class registerForm(FlaskForm):#debemos crear una clase y que herede FlaskForm
-
-    username = StringField("Registrar usuario: ")
-    password = PasswordField("Contraseña usuario: ")
+    username = StringField("Registrar usuario: ", validators=[DataRequired(),  length(min=3, max=25)]) 
+    password = PasswordField("Contraseña usuario: ", validators=[DataRequired(), length(min=4, max=25)])
     submit = SubmitField("Enviar")
     
 
-#creamos una ruta para la pagina de registro
-@app.route("/auth/register", methods = ['GET', 'POST'])#por defecto trabajo con get, pero podemos especificar que use post
+
+@app.route("/auth/register", methods = ['GET', 'POST'])
 def register():
     form  = registerForm()#hacemos la instancia 
     if form.validate_on_submit():
-    #valida los datos y ejecuta esto en el metodo post, para que funcione debe estar en nuestro html
         username = form.username.data
         password = form.password.data
         return f"user {username} contra {password}"
 
 
     return render_template("auth/register.html", form = form)
-
-
-
-
-    #forma anterior
-    """
-    if request.method == "POST":
-        username = request.form['username']#dentro de la lista va el nombre del valor del atributo name en el input del form
-        password = request.form['password']
-
-        if len(username)>2 and len(password)>5:
-            return f"user {username} contra {password}"
-            
-        else:
-            error = "El nombre debe ser mayor a 3 dijtos y la contra mayor a 4"
-            return render_template("auth/register.html",form = form, error = error)
-            """
